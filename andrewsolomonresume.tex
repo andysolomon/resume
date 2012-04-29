@@ -1,0 +1,237 @@
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+
+% (c) 2008 Nathaniel Johnston <nathaniel@nathanieljohnston.com> http://www.nathanieljohnston.com
+
+% (c) 2011 Scott Clark <sc932@cornell.edu> http://cam.cornell.edu/~sc932
+%
+
+%This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 2.5 License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/2.5/ or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+\newlength{\outerbordwidth}
+
+\pagestyle{empty}
+
+\raggedbottom
+
+\raggedright
+
+\usepackage[svgnames]{xcolor}
+
+\usepackage{framed}
+
+\usepackage{tocloft}
+
+%-----------------------------------------------------------
+
+%Edit these values as you see fit
+
+\setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
+
+\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
+
+\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+
+%-----------------------------------------------------------
+
+%Margin setup
+
+\setlength{\evensidemargin}{-0.25in}
+
+\setlength{\headheight}{-0.25in}
+
+\setlength{\headsep}{0in}
+
+\setlength{\oddsidemargin}{-0.25in}
+
+\setlength{\paperheight}{11in}
+
+\setlength{\paperwidth}{8.5in}
+
+\setlength{\tabcolsep}{0in}
+
+\setlength{\textheight}{9.75in}
+
+\setlength{\textwidth}{7in}
+
+\setlength{\topmargin}{-0.3in}
+
+\setlength{\topskip}{0in}
+
+\setlength{\voffset}{0.1in}
+
+%-----------------------------------------------------------
+
+%Custom commands
+
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+
+\newcommand{\resheading}[1]{\vspace{8pt}
+
+  \parbox{\textwidth}{\setlength{\FrameSep}{\outerbordwidth}
+
+    \begin{shaded}
+
+\setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
+
+    \end{shaded}
+
+  }\vspace{-5pt}
+
+}
+
+\newcommand{\ressubheading}[4]{
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+
+		\textbf{#1} & #2 \\
+
+		\textit{#3} & \textit{#4} \\
+
+\end{tabular*}\vspace{-6pt}}
+
+%-----------------------------------------------------------
+
+\begin{document}
+
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
+
+\textbf{\Large Andrew Solomon} & \textbf{\today} \\
+
+Life-time Student, Computational Scientist & andrewsolomon.edu@gmail.com \\
+
+Atlanta, GA, 30324 & andysolomong.github.com / 678-613-5631\\
+
+\end{tabular*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Education}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+
+	\ressubheading{Albany State University}{Albany, GA}{B.Sc. Computer Science}{2005 - 2010}
+
+	\begin{itemize}
+
+		\resitem{Department of Math and Computer Science (Research Assistant, 4 years)}
+
+		\resitem{Emphasis on machine learning/data mining and algorithm design/software development related to bioinformatics and IT security}
+
+		\resitem{Graduated Cum Laude with minors in Business and Mathematics}
+
+	\end{itemize}
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Skills}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item {\bf Development:} Python (Django), JavaScript (Nodejs, Geddy, Backbone), Ruby (Rails, Sinatra), PHP (Codeigniter)
+
+\item {\bf Mathematics:} Optimization, Linear Algebra, Computational Physics, Complex Systems, Tomology
+
+\item {\bf Computer Science:} Machine Learning, Data Mining, Parallel Programming, Data Structures, Artificial Intelligence, Operating Systems
+
+\item Discovering and implementing new ideas. Give me an API and a problem and I will figure it out.
+
+\item Diverse background in Math, Computer Science, Physics and Biology allows me to communicate to a wide scientific and general audience and begin contributing to any group immediately.
+
+\item I have worked in many places in a myriad of fields. I can readily learn and adapt to a new discipline, area or environment and start pushing real results quickly.
+
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resheading{Research and Work Experience}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}
+
+\item
+
+	\ressubheading{The Monticello Corporation}{Atlanta, GA}{Senior Software Development}{2010-Current Position}
+
+	\begin{itemize}
+
+		\resitem{Developed and maintained commercial SAAS software in \texttt{PHP} and \texttt{javascript}}
+
+    \resitem{Implemented and designed 3rd party API functionality to allow users to freely interact with Google Docs API}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Blackbox Network Services}{Fitzgerald, GA}{Computer Data Technician}{2010}
+
+	\begin{itemize}
+
+		\resitem{Setup, configured, and maintained Wal-Mart's complex LAN and WLAN implementation.  Gained experience setting up and maintaing Cisco routers and swithces, along with VLAN and Voice-Over-IP solutions}
+
+    \resitem{Made key schematically design routines for proper planning and installinton of wired and wireless systems}
+
+	\end{itemize}
+
+\item 
+
+	\ressubheading{Albany State University}{Albany, GA}{Researcher in Information Assurance program under Dr. Robert Owor}{Summer 2009}
+
+	\begin{itemize}
+
+		\resitem{Wrote \textbf{open source} web application in \texttt{PHP} and \texttt{Javascript} allowing students to explore research options in Information Assurance}
+
+    \resitem{Contributed in setting up information security workshops with Alabama A and M, Auburn University, Albany Tech, and Darton College}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{Albany State University}{Albany, GA}{Research Assistant in Perl for Bioinformatics under Dr. Khalil Dajani}{2006-2008}
+
+	\begin{itemize}
+
+		\resitem{Developed minor \textbf{open source} desktop utility in \texttt{Perl}, used to analyze DNA sequencing of any being}
+  
+		\resitem{Gained programming experience in \texttt{Perl} and \texttt{Ruby} working with software packages like BioPerl and BioRuby}
+
+	\end{itemize}
+
+\item
+
+	\ressubheading{KaKo Industries}{Roswell, GA}{Data Technician}{2005-2007}
+
+	\begin{itemize}
+
+		\resitem{Worked with a small team prewiring CAT5, coaxial, and home security and speaker wires.  Installed systems from small business to major residential outfits}
+
+	\end{itemize}
+
+\end{itemize}
+
+
+\resheading{Personal}
+
+\begin{itemize}
+
+\item {\bf Hobbies:} Poker, Swimming, Running, Video Games, Building things (physical and/or digital) and drinking good beer new and old friends.
+
+\item {\bf Why Industry over Academia?} I love exploring new problems on the forefront of research, but academia moves too slowly and bureaucratically for me. I enjoy working in a fast-paced environment pushing measurable results to clients on a daily timescale, using the skills that I have honed throughout my academic career.
+
+\item {\bf My Ideal Position:} Working with a fun team solving interesting problems. I enjoy every part of development, from deep backend optimization to client-facing applications and interaction. I would love to make a difference wherever and however I am able while leveraging my machine learning, data mining and mathematical background.
+
+\end{itemize}
+
+\end{document}
